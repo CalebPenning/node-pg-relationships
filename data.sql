@@ -33,9 +33,9 @@ INSERT INTO users (name, type) VALUES ('Jenny', 'staff');
 INSERT INTO users (name, type) VALUES ('Jeff', 'user');
 
 INSERT INTO messages (user_id, msg) VALUES
-  (1, 'msg #1'),
-  (1, 'msg #2'),
-  (2, 'msg #3');
+  (1, 'I am so happy you are my friend.'),
+  (1, 'I love coding with you man.'),
+  (2, 'You are the prettiest girl I have ever seen.');
 
 INSERT INTO tags VALUES
   ('py', 'Python'),
@@ -45,3 +45,12 @@ INSERT INTO messages_tags VALUES
     (1, 'py'),
     (1, 'js'),
     (2, 'js');
+
+
+-- SELECT m.id, m.msg, t.tag
+-- FROM messages AS m 
+-- LEFT JOIN messages_tags AS mt 
+-- ON m.id = mt.message_id
+-- LEFT JOIN tags as t
+-- ON mt.tag_code = t.code
+-- WHERE m.id = 1;
